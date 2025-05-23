@@ -1,6 +1,6 @@
 // import AboutHero from "./AboutHero";
 import Capabilities from "./Capabilities";
-import ContactUs from "./ContactUs";
+import ContactUs from "../ContactUs";
 import Empowering from "./Empowering";
 import Hero from "./Hero";
 import PeopleReview from "./PeopleReview";

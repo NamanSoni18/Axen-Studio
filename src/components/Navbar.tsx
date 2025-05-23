@@ -5,8 +5,8 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Projects", href: "/projects" },
+  { name: "Connect Us", href: "/connect" },
   { name: "Services", href: "/services" },
-  { name: "Contact Us", href: "/contact" },
 ];
 
 function Navbar() {

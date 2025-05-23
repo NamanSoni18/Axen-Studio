@@ -2,7 +2,7 @@ import { home_assets } from "@/assets/home_assets";
 
 const capabilities = [
   {
-    title: "Music Production",
+    title: "Audio Production",
     description: "Our studio makes your music sound amazing",
     image: `${home_assets.section4_img1}`,
     gradient: "from-[#FFA500] to-[#FF1493]",
@@ -14,13 +14,25 @@ const capabilities = [
     gradient: "from-[#FF1493] to-[#FF69B4]",
   },
   {
-    title: "Wedding Shoots",
+    title: "Pre Wedding Shoots",
     description: "Creating memories to cherish for a lifetime",
     image: `${home_assets.section4_img3}`,
     gradient: "from-[#FF69B4] to-[#FF8C00]",
   },
   {
-    title: "Graphics Design",
+    title: "Wedding Shoots",
+    description: "Creating memories to cherish for a lifetime",
+    image: `${home_assets.section4_img3}`,
+    gradient: "from-[#FF69B4] to-[#FF8C00]",
+  },
+  // {
+  //   title: "Graphics Design",
+  //   description: "We deliver eye-catching visuals that enhance your brand",
+  //   image: `${home_assets.section4_img4}`,
+  //   gradient: "from-[#FF8C00] to-[#FFA500]",
+  // },
+  {
+    title: "Digital Marketing",
     description: "We deliver eye-catching visuals that enhance your brand",
     image: `${home_assets.section4_img4}`,
     gradient: "from-[#FF8C00] to-[#FFA500]",
