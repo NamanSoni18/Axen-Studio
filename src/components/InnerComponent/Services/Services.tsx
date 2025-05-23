@@ -11,9 +11,9 @@ const Services = () => {
   return (
     <div>
       <Hero
-        title="Connect Us"
+        title="Services"
         bottomTitle="Transforming Moments into"
-        gradientText="Perfection"
+        gradientText="Greatness"
         image1={services_assets.frame_2971}
         image2={services_assets.frame_2947}
       />

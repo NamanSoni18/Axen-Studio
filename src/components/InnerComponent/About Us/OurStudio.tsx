@@ -1,13 +1,4 @@
 import { about_assets } from "@/assets/About/about_assets";
-import { Phone } from "lucide-react"; // Added Phone icon
-
-// Placeholder for different images if you have them
-const studioImages = [
-  about_assets.Our_Studio, // Top-left
-  about_assets.Our_Studio_2, // Top-right (in the 2x2 grid)
-  about_assets.Our_Studio_3, // Bottom-left
-  about_assets.Our_Studio_4, // Bottom-right
-];
 
 export default function OurStudio() {
   return (
