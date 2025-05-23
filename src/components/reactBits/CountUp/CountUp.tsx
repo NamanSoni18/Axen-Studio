@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 interface CountUpProps {
-  to: number;
+  to: any;
   from?: number;
   direction?: "up" | "down";
   delay?: number;

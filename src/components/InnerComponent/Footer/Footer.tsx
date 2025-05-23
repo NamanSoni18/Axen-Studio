@@ -34,7 +34,7 @@ export default function Footer() {
           <img
             src={footer_assets.footer_img1}
             alt="Axen Studios Logo"
-            className="w-24 h-24 object-contain"
+            className="w-32 h-32  object-contain animate-spin [animation-duration:10s]"
           />
         </div>
         <div className="flex-1 h-[1px] bg-gray-300" />

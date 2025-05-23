@@ -5,6 +5,7 @@ import Home from "./components/InnerComponent/Home/Home";
 import Projects from "./components/InnerComponent/Projects/projects";
 import ConnectUs from "./components/InnerComponent/Connect Us/ConnectUs";
 import About from "./components/InnerComponent/About Us/About";
+import Services from "./components/InnerComponent/Services/Services";
 function App() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects />} />
         <Route path="connect" element={<ConnectUs />} />
+        <Route path="services" element={<Services />} />
       </Route>
     </Routes>
   );

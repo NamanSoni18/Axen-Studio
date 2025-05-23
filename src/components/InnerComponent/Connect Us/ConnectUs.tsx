@@ -5,6 +5,7 @@ import Innovation from "./Innovation";
 import ContactForm from "./ContactForm";
 import ContactUs from "../ContactUs";
 import GoogleMap from "./googleMap";
+import Footer from "../Footer/Footer";
 
 const Projects = () => {
   return (
@@ -20,6 +21,7 @@ const Projects = () => {
       <ContactForm />
       <ContactUs/>
       <GoogleMap/>
+      <Footer/>
     </div>
   );
 };

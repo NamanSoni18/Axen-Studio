@@ -33,7 +33,7 @@ export default function ContactUs() {
               Connect Us
             </h3>
             <p className="text-white">
-              91+ 7841164865
+              +91 7841164865
             </p>
           </div>
 

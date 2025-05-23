@@ -8,6 +8,7 @@ import Pricing from "./Pricing";
 import RecentEvents from "./RecentEvents";
 import Team from "./Team";
 import WelcomeSection from "./WelcomeSection";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
       <ContactUs/>
       <Team/>
       <Pricing/>
-      {/* <AboutHero/> */}
+      <Footer/>
     </div>
   );
 };
