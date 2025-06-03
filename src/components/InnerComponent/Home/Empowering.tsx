@@ -1,5 +1,4 @@
 import { home_assets } from '@/assets/home_assets';
-import React from 'react'
 
 const Empowering = () => {
   return (

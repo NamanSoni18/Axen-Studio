@@ -218,7 +218,6 @@ const projects = [
 ]
 
 export default function OurProjects() {
-  const [isHovered, setIsHovered] = useState<number | null>(null)
   const [activeCategory, setActiveCategory] = useState("Music Production")
 
   return (

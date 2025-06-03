@@ -1,9 +1,8 @@
 /// <reference types="@types/google.maps" />
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 const GoogleMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const loadGoogleMaps = () => {
@@ -13,12 +12,10 @@ const GoogleMap = () => {
         script.async = true;
         script.defer = true;
         script.onload = () => {
-          setIsLoaded(true);
           initMap();
         };
         document.head.appendChild(script);
       } else {
-        setIsLoaded(true);
         initMap();
       }
     };

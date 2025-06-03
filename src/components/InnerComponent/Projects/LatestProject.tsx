@@ -1,5 +1,4 @@
 import { projects_assets } from "@/assets/Projects/projects_assets";
-import { CheckCircle } from "lucide-react";
 
 const achievements = [
   {

@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../Hero";
 import { connect_assets } from "@/assets/ConnectUs/connect_assets";
 import Innovation from "./Innovation";

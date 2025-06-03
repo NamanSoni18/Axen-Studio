@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero_Projects from './Hero'
 import LatestProject from './LatestProject'
 import OurProjects from './OurProjects'

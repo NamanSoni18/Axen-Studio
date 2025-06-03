@@ -1,12 +1,5 @@
 import { home_assets } from "@/assets/home_assets";
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const services = [
-  { id: "01", name: "Music Production" },
-  { id: "02", name: "Wedding shoots" },
-  { id: "03", name: "Video Production" },
-];
 
 const pricingItems = [
   { id: "01", name: "Video Sessions", price: 69 },

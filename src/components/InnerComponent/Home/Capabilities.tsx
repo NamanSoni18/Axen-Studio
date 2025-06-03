@@ -50,7 +50,7 @@ export default function Capabilities() {
         </h2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {capabilities.map((capability, index) => (
+          {capabilities.map((capability) => (
             <div
               key={capability.title}
               className="group relative overflow-hidden rounded-lg"

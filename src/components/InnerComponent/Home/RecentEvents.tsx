@@ -1,6 +1,5 @@
 import { home_assets } from "@/assets/home_assets";
 import GradientButton from "@/components/UiVerse/graidentButton";
-import { ArrowRight, Mail, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function RecentEvents() {

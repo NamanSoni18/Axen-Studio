@@ -1,5 +1,3 @@
-import React from 'react';
-
 const services = [
   { id: 1, duration: "1hr Studio Time", name: "Music Production" },
   { id: 2, duration: "1hr Studio Time", name: "Video Production" },

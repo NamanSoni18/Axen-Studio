@@ -1,4 +1,3 @@
-import { CheckCircle } from "lucide-react";
 import { connect_assets } from "@/assets/ConnectUs/connect_assets";
 import { projects_assets } from "@/assets/Projects/projects_assets";
 

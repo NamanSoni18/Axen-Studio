@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { about_assets } from "@/assets/About/about_assets";
 
 interface VisionSlide {
