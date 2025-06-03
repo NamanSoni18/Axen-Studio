@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { connect_assets } from "@/assets/ConnectUs/connect_assets";
 import { home_assets } from "@/assets/home_assets";
-import { Link } from "react-router-dom";
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -10,9 +10,47 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<string>("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus("");
+    
+    console.log("Submitting form data:", formData);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xkgbnavl', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log("Form submission response:", response);
+
+      if (response.ok) {
+        console.log("Form submitted successfully!");
+        setSubmitStatus("Message sent successfully!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+      } else {
+        console.error("Form submission failed:", await response.text());
+        setSubmitStatus("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -127,12 +165,23 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <Link 
-              to="/"
-              className="mb-12 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-lg w-full font-semibold text-black transition-all hover:bg-opacity-90"
+            {/* Replace Link with button */}
+            <button 
+              type="submit"
+              disabled={isSubmitting}
+              className="mb-12 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-lg w-full font-semibold text-black transition-all hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span className="text-gradient">Send Message</span>
-            </Link>
+              <span className="text-gradient">
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </span>
+            </button>
+
+            {/* Add status message */}
+            {submitStatus && (
+              <p className={`text-center ${submitStatus.includes("success") ? "text-green-500" : "text-red-500"}`}>
+                {submitStatus}
+              </p>
+            )}
           </form>
         </div>
       </div>
