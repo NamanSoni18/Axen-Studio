@@ -14,7 +14,7 @@ import section4_img4 from './section4_img4.png';
 import vector from './Vector.svg';
 import mail from './Frame 2889.svg';
 import section5_img1 from './Section5_img1.png';
-import section5_img2 from './Section5_img2.png';
+import section5_img2 from './Section5_img.png';
 import section5_circle from './section5_circleImg.png';
 import section5_rating from './Frame 2738.png';
 import section6_review from './review_img1.png';
