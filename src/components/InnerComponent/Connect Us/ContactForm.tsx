@@ -18,8 +18,6 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setSubmitStatus("");
     
-    console.log("Submitting form data:", formData);
-    
     try {
       const response = await fetch('https://formspree.io/f/xkgbnavl', {
         method: 'POST',
@@ -29,8 +27,6 @@ const ContactForm = () => {
         },
         body: JSON.stringify(formData),
       });
-
-      console.log("Form submission response:", response);
 
       if (response.ok) {
         console.log("Form submitted successfully!");
