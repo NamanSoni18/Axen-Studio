@@ -36,7 +36,7 @@ export default function VisionSection() {
   };
 
   return (
-    <section className="bg-black min-h-screen p-8 md:p-16 relative overflow-hidden">
+    <section className="bg-black min-h-screen p-8 md:p-16 md:mb-0 mb-[-400px] relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -82,7 +82,7 @@ export default function VisionSection() {
             <div className="absolute right-24 bottom-24 text-gray-700 text-2xl">+</div>
 
             {/* Image */}
-            <div className="absolute right-4 top-8 w-128 h-80 rounded-2xl shadow-xl">
+            <div className="absolute hidden md:block right-4 top-8 w-128 h-80 rounded-2xl shadow-xl">
               <img
                 src={about_assets.Frame_3089}
                 alt="Studio work"

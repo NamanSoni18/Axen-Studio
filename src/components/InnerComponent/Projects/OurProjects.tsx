@@ -221,7 +221,7 @@ export default function OurProjects() {
   const [activeCategory, setActiveCategory] = useState("Music Production")
 
   return (
-    <section className="bg-black px-4 py-16">
+    <section className="bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-12 text-center text-4xl font-bold sm:text-5xl">
           <span className="bg-gradient-to-r from-[#ff8a00] via-[#ff2e7a] to-[#ff007a] bg-clip-text text-transparent">
@@ -230,13 +230,13 @@ export default function OurProjects() {
         </h2>
 
         {/* Category Tabs */}
-        <div className="mb-8 flex flex-wrap justify-center gap-4">
+        <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "rounded-full px-6 py-2 text-sm font-medium transition-all",
+                "rounded-full px-4 py-2 text-xs font-medium transition-all sm:px-6 sm:text-sm",
                 activeCategory === category
                   ? "bg-gradient-to-r from-[#ff8a00] to-[#ff2e7a] text-white"
                   : "text-white hover:bg-white/10",
@@ -251,7 +251,7 @@ export default function OurProjects() {
         <div className="mb-12 h-[2px] w-full bg-gradient-to-r from-[#ff8a00] via-[#ff2e7a] to-[#ff007a]"></div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-4 gap-4 auto-rows-[200px]">
+        <div className="grid grid-cols-2 gap-4 auto-rows-[150px] md:grid-cols-4 md:auto-rows-[200px]">
           {projects
             .filter((project) => activeCategory === project.category || activeCategory === "all")
             .map((project) => (

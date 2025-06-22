@@ -28,44 +28,46 @@ export default function Hero({
   }
 }: HeroProps) {
   return (
-    <section className="bg-black min-h-screen p-8 md:p-16">
-      <div className="space-y-12">
+    <section className="mt-[40px] bg-black min-h-screen p-4 sm:p-8 md:p-16">
+      <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
         {/* Main Content Flex */}
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Left Text */}
-          <h1 
-            className="text-8xl md:text-9xl font-bold text-transparent bg-clip-text md:w-full"
-            style={{
-              backgroundImage: `linear-gradient(to right, ${gradientColors.from}, ${gradientColors.via}, ${gradientColors.to})`
-            }}
-          >
-            {title}
-          </h1>
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h1 
+              className="text-6xl sm:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text"
+              style={{
+                backgroundImage: `linear-gradient(to right, ${gradientColors.from}, ${gradientColors.via}, ${gradientColors.to})`
+              }}
+            >
+              {title}
+            </h1>
+          </div>
 
           {/* Right Image */}
-          <div className="relative h-[280px] w-full md:w-1/2 rounded-2xl overflow-hidden flex justify-end">
+          <div className="relative h-[250px] sm:h-[300px] w-full md:w-1/2 rounded-2xl overflow-hidden">
             <img
               src={image1}
               alt={image1Alt}
-              className="object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
 
         {/* Bottom Flex */}
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
           {/* Bottom Left Image */}
-          <div className="relative h-[400px] w-full md:w-1/2 rounded-2xl overflow-hidden flex flex-row items-center">
+          <div className="relative h-[300px] sm:h-[450px] w-full md:w-1/2 rounded-2xl overflow-hidden">
             <img
               src={image2}
               alt={image2Alt}
-              className="object-cover object-right"
+              className="w-full h-full object-cover"
             />
           </div>
 
           {/* Bottom Right Text */}
-          <div className="flex items-center">
-            <h2 className="text-4xl md:text-7xl lg:text-7xl font-bold text-white leading-tight">
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
               {bottomTitle}{" "}
               <span 
                 className="text-transparent bg-clip-text"

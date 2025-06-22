@@ -9,11 +9,11 @@ interface ServiceItemCardProps {
   price: string;
   yearlyProduction: string;
   activeCustomers: string;
-  mainImage: string; // Changed from StaticImageData to string for flexibility
-  galleryImages: string[]; // Changed from StaticImageData[] to string[]
+  mainImage: string;
+  galleryImages: string[];
   imagePosition: "left" | "right";
-  logoIconSvg?: React.ReactNode; // Optional SVG for the top-left icon
-  viewMoreIconSvg?: React.ReactNode; // Optional SVG for the view more icon
+  logoIconSvg?: React.ReactNode;
+  viewMoreIconSvg?: React.ReactNode;
 }
 
 const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
@@ -29,23 +29,30 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
   logoIconSvg,
   viewMoreIconSvg,
 }) => {
-  const imageOrderClass =
-    imagePosition === "left" ? "lg:order-1" : "lg:order-2";
+  const imageOrderClass = imagePosition === "left" ? "lg:order-1" : "lg:order-2";
   const contentOrderClass =
-    imagePosition === "left" ? "lg:order-2 lg:pl-8 lg:text-left" : "lg:order-1 lg:pr-8 lg:text-right";
+    imagePosition === "left"
+      ? "lg:order-2 lg:pl-12 text-center lg:text-left"
+      : "lg:order-1 lg:pr-12 text-center lg:text-right";
   const pricePositionClass =
     imagePosition === "left"
-      ? "bottom-6 md:bottom-10 -right-20 transform -translate-x-1/2 md:translate-x-0 md:right-6"
-      : "bottom-6 md:bottom-10 right-12 transform translate-x-1/2 md:translate-x-0 md:right-6";
+      ? "bottom-4 right-4 lg:bottom-8 lg:left-8 lg:right-auto"
+      : "bottom-4 left-4 lg:bottom-8 lg:right-8 lg:left-auto";
+  const iconPositionClass =
+    imagePosition === "left"
+      ? "top-[-20px] left-[-20px] lg:top-[-30px] lg:left-[-30px]"
+      : "top-[-20px] right-[-20px] lg:top-[-30px] lg:right-[-30px]";
+
+  const galleryItemBaseClass = "w-[calc(50%-0.5rem)] sm:w-[calc(33.33%-0.66rem)] h-28 md:h-32 rounded-lg";
 
   const viewMoreButton = (
-    <div className="w-[calc(33.33%-0.75rem)] group h-28 md:h-32 rounded-lg bg-white flex flex-col items-center justify-center text-center p-2">
+    <div className={`${galleryItemBaseClass} group bg-white flex flex-col items-center justify-center text-center p-2`}>
       {viewMoreIconSvg && (
-        <div className="bg-gradient-to-r transition-transform duration-300 rotate-[-30deg] group-hover:rotate-0 from-pink-500 to-orange-500 p-2 rounded-full mb-1">
+        <div className="bg-gradient-to-r transition-transform duration-300 rotate-[-30deg] group-hover:rotate-0 from-pink-500 to-orange-50  0 p-2 rounded-full mb-1">
           {viewMoreIconSvg}
         </div>
       )}
-      <button className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">
+      <button className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">
         View More
       </button>
     </div>
@@ -54,57 +61,45 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
   const galleryImageElements = galleryImages.map((imgSrc, index) => (
     <div
       key={index}
-      className="w-[calc(33.33%-0.75rem)] h-28 md:h-32 rounded-lg overflow-hidden"
+      className={`${galleryItemBaseClass} overflow-hidden`}
     >
       <img
         src={imgSrc}
         alt={`Gallery image ${index + 1} for ${title}`}
-        width={200}
-        height={150}
         className="w-full h-full object-cover"
       />
     </div>
   ));
 
   return (
-    <div className="flex min-h-screen flex-col justify-center lg:flex-row items-center p-6 md:p-24 rounded-xl mb-6">
-      <div
-        className={`relative w-full group relative lg:w-2/5 ${imageOrderClass}`}
-      >
+    <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0 p-4 sm:p-8 rounded-xl mb-12 lg:mb-24">
+      <div className={`relative w-full lg:w-5/12 group ${imageOrderClass}`}>
         <img
           src={mainImage}
           alt={`${title} Setup`}
-          width={600}
-          height={750}
-          className="rounded-lg object-cover w-full h-auto md:h-[500px] lg:h-[600px]"
+          className="rounded-lg object-cover w-full aspect-[4/5]"
         />
         {logoIconSvg && (
-          <div
-            className={`absolute top-[-15px] ${
-              imagePosition === "left" ? "left-[-15px]" : "right-[-15px]"
-            } bg-black p-8 rounded-full`}
-          >
-            <div className=" rounded-full bg-white p-2 transition-transform duration-300 group-hover:rotate-[25deg]">
+          <div className={`absolute ${iconPositionClass} bg-black p-4 lg:p-6 rounded-full`}>
+            <div className="rounded-full bg-white p-2 transition-transform duration-300 group-hover:rotate-[25deg]">
               <img
                 src={home_assets.vector}
                 alt="Arrow Icon"
-                className="h-8 w-8"
+                className="h-6 w-6 lg:h-8 lg:w-8"
               />
             </div>
           </div>
         )}
-        <div
-          className={`absolute bg-black bg-opacity-70 px-6 py-3 rounded-lg text-center ${pricePositionClass}`}
-        >
-          <span className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
+        <div className={`absolute bg-black bg-opacity-70 px-4 py-2 lg:px-6 lg:py-3 rounded-lg text-center ${pricePositionClass}`}>
+          <span className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
             ${price}
           </span>
-          <span className="text-2xl text-white">/hr</span>
+          <span className="text-xl lg:text-2xl text-white">/hr</span>
         </div>
       </div>
 
-      <div className={`w-full lg:w-[600px] ${contentOrderClass}`}>
-        <h2 className="text-5xl md:text-7xl font-bold mb-6">
+      <div className={`w-full lg:w-7/12 ${contentOrderClass}`}>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
           <span className={`${titleGradient} text-transparent bg-clip-text`}>
             {title.includes(' ') ? (
               <>
@@ -117,14 +112,14 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
             )}
           </span>
         </h2>
-        <p className="text-gray-300 mb-8 text-base md:text-lg">{description}</p>
+        <p className="text-gray-300 mb-8 text-base md:text-lg max-w-xl mx-auto lg:mx-0">{description}</p>
 
-        <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 mb-10">
+        <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 mb-10 justify-center lg:justify-start">
           <div>
             <span className="text-4xl md:text-5xl font-bold text-white">
               <CountUp
                 from={0}
-                to={yearlyProduction}
+                to={parseInt(yearlyProduction)}
                 separator=""
                 direction="up"
                 duration={1}
@@ -135,10 +130,10 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
             <p className="text-gray-400">Yearly Production</p>
           </div>
           <div>
-          <span className="text-4xl md:text-5xl font-bold  text-white">
+            <span className="text-4xl md:text-5xl font-bold text-white">
               <CountUp
                 from={0}
-                to={activeCustomers}
+                to={parseInt(activeCustomers)}
                 separator=""
                 direction="up"
                 duration={1}
@@ -150,7 +145,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-3 gap-4 justify-center lg:justify-start">
           {imagePosition === 'right' && viewMoreButton}
           {galleryImageElements}
           {imagePosition === 'left' && viewMoreButton}
@@ -167,17 +162,18 @@ const defaultLogoIcon = (
     viewBox="0 0 20 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="text-black"
   >
     <path
       d="M3.125 10H16.875"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M11.25 4.375L16.875 10L11.25 15.625"
-      stroke="white"
+      stroke="currentColor"
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -187,7 +183,7 @@ const defaultLogoIcon = (
 
 const ServiceProvide = () => {
   return (
-    <div className="bg-black text-white py-16 px-4 md:px-8">
+    <div className="bg-black text-white py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           Services We provide
@@ -203,63 +199,63 @@ const ServiceProvide = () => {
           activeCustomers="100"
           mainImage={services_assets.frame_3054}
           galleryImages={[
-            services_assets.frame_3068, // Assuming these are StaticImageData
+            services_assets.frame_3068,
             services_assets.frame_3069,
           ]}
           imagePosition="left"
           logoIconSvg={defaultLogoIcon}
-          viewMoreIconSvg={defaultLogoIcon} // Can be a different icon
+          viewMoreIconSvg={defaultLogoIcon}
         />
 
         {/* Music Production Card - Image on Right */}
         <ServiceItemCard
           title="Music Production"
-          titleGradient="bg-gradient-to-r from-pink-500 to-purple-600" // Adjust gradient as needed
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations" // Update description
-          price="55" // Update price if different
-          yearlyProduction="250" // Update stats
-          activeCustomers="100" // Update stats
-          mainImage={services_assets.frame_3054_3} // Replace with actual music production main image from assets
+          titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
+          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          price="55"
+          yearlyProduction="250"
+          activeCustomers="100"
+          mainImage={services_assets.frame_3054_3}
           galleryImages={[
-            services_assets.frame_3069_3, // Replace with actual music gallery images
+            services_assets.frame_3069_3,
             services_assets.frame_3070_3,
           ]}
           imagePosition="right"
           logoIconSvg={defaultLogoIcon}
-          viewMoreIconSvg={defaultLogoIcon} // Can be a different icon
+          viewMoreIconSvg={defaultLogoIcon}
         />
 
         <ServiceItemCard
           title="Wedding Shoots"
-          titleGradient="bg-gradient-to-r from-pink-500 to-purple-600" // Adjust gradient as needed
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations" // Update description
-          price="55" // Update price if different
-          yearlyProduction="250" // Update stats
-          activeCustomers="100" // Update stats
-          mainImage={services_assets.frame_3054_4_1} // Replace with actual music production main image from assets
+          titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
+          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          price="55"
+          yearlyProduction="250"
+          activeCustomers="100"
+          mainImage={services_assets.frame_3054_4_1}
           galleryImages={[
-            services_assets.frame_3068_4_2, // Replace with actual music gallery images
+            services_assets.frame_3068_4_2,
             services_assets.frame_3069_4_3,
           ]}
           imagePosition="left"
           logoIconSvg={defaultLogoIcon}
-          viewMoreIconSvg={defaultLogoIcon} // Can be a different icon
+          viewMoreIconSvg={defaultLogoIcon}
         />
         <ServiceItemCard
           title="Digital Marketing"
-          titleGradient="bg-gradient-to-r from-pink-500 to-purple-600" // Adjust gradient as needed
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations" // Update description
-          price="55" // Update price if different
-          yearlyProduction="250" // Update stats
-          activeCustomers="100" // Update stats
-          mainImage={services_assets.frame_3054_5_1} // Replace with actual music production main image from assets
+          titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
+          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          price="55"
+          yearlyProduction="250"
+          activeCustomers="100"
+          mainImage={services_assets.frame_3054_5_1}
           galleryImages={[
-            services_assets.frame_3069_5_2, // Replace with actual music gallery images
+            services_assets.frame_3069_5_2,
             services_assets.frame_3070_5_3,
           ]}
           imagePosition="right"
           logoIconSvg={defaultLogoIcon}
-          viewMoreIconSvg={defaultLogoIcon} // Can be a different icon
+          viewMoreIconSvg={defaultLogoIcon}
         />
       </div>
     </div>

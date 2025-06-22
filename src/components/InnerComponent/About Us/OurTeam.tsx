@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-black min-h-full md:px-16 md:pt-16">
+    <section className="bg-black min-h-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Gradient Heading */}
         <h2 className="text-5xl md:text-6xl font-bold text-center">
@@ -41,7 +41,7 @@ export default function TeamSection() {
         </h2>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
@@ -51,7 +51,7 @@ export default function TeamSection() {
               <img
                 src={member.image || "/placeholder.svg"}
                 alt={member.name}
-                className="object-cover grayscale transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover grayscale transition-transform duration-300 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
 
