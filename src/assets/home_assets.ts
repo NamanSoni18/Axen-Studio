@@ -18,6 +18,9 @@ import section5_img2 from './Section5_img.png';
 import section5_circle from './section5_circleImg.png';
 import section5_rating from './Frame 2738.png';
 import section6_review from './review_img1.png';
+import aadarsh_yadav from './aadarsh_yadav.png';
+import sachin_yadav from './sachin-yadav.png';
+import shubh_saini from './shubh-saini.png';
 import section7_phone from './section7_phone.svg';
 import section7_map from './section7_map.svg';
 import section7_clock from './section7_clock.svg';
@@ -47,6 +50,9 @@ export const home_assets = {
   section5_circle,
   section5_rating,
   section6_review,
+  aadarsh_yadav,
+  sachin_yadav,
+  shubh_saini,
   section7_phone,
   section7_map,
   section7_clock,

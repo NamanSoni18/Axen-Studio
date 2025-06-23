@@ -17,10 +17,10 @@ export default function ContactUs() {
               <img src={home_assets.section7_map} alt="No Image" className="h-14 w-14" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
-              Voyceo Studio Recording
+              Axen Studio
             </h3>
             <p className="text-white">
-              36 street, Raipur, Chhattisgarh
+              Address - 1/1 Upper Ground Floor, Sunder Vihar Gate Number 2, Paschim Vihar West,  New Delhi 110087
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export default function ContactUs() {
               Connect Us
             </h3>
             <p className="text-white">
-              +91 7841164865
+              9818538442 / 9911910365
             </p>
           </div>
 
@@ -43,11 +43,11 @@ export default function ContactUs() {
               <img src={home_assets.section7_clock} alt="No Image" className="h-14 w-14" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
-              Working Hours
+              Working Days
             </h3>
             <div className="space-y-1 text-white">
-              <p>Mon-Fri: 9:00 am – 5:00 pm</p>
-              <p>Sat-Sun: 11:00 am – 16:00 pm</p>
+              <p>All 7 Days</p>
+              <p>11:00 AM to 08:00 PM</p>
             </div>
           </div>
         </div>

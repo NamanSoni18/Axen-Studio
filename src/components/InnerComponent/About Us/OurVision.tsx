@@ -10,7 +10,7 @@ const slides: VisionSlide[] = [
   {
     title: "Quality",
     description:
-      "Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations.",
+      "Axen Studio offers high-quality audio production, video production, wedding/pre-wedding shoots and digital marketing services. We are committed to delivering superior quality work that exceeds expectations.",
   },
   {
     title: "Innovation",

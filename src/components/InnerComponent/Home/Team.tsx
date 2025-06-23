@@ -9,30 +9,25 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'Akash Kumar',
-    role: 'Creative Director',
-    image: `${home_assets.section6_review}`
+    name: 'Aadarsh Yadav',
+    role: 'Founder',
+    image: `${home_assets.aadarsh_yadav}`
   },
   {
-    name: 'Sonia Khan',
-    role: 'Marketing Manager',
-    image: `${home_assets.section8_img1}`
-  },
-  {
-    name: 'Sonu Raj',
-    role: 'Video And Production Manager',
-    image: `${home_assets.section6_review}`
-  },
-  {
-    name: 'David Gupta',
-    role: 'Sound Engineer',
-    image: `${home_assets.section8_img1}`
-  },
-  {
-    name: 'Rajiv Sharma',
+    name: 'Anurag Yadav',
     role: 'Photography Lead',
-    image: `${home_assets.section6_review}`
-  }
+    image: `${home_assets.section8_img1}`
+  },
+  {
+    name: 'Sachin Yadav',
+    role: 'Manager',
+    image: `${home_assets.sachin_yadav}`
+  },
+  {
+    name: 'Shubh Saini',
+    role: 'Editor',
+    image: `${home_assets.shubh_saini}`
+  },
 ]
 
 export default function Team() {
