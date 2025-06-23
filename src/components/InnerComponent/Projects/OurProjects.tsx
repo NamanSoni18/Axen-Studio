@@ -2,7 +2,7 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { projects_assets } from "@/assets/Projects/projects_assets"
 
-const categories = ["Music Production", "Wedding shoot", "Video", "Graphic Design"]
+const categories = ["Audio Production", "Wedding shoot", "Video Production", "Graphic Design"]
 
 const projects = [
   {
@@ -14,13 +14,13 @@ const projects = [
   {
     id: 2,
     image: `${projects_assets.OurProjects_img1}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-1 row-span-1",
   },
   {
     id: 3,
     image: `${projects_assets.OurProjects_img5}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-2",
   },
   {
@@ -38,13 +38,13 @@ const projects = [
   {
     id: 6,
     image: `${projects_assets.OurProjects_img7}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-2",
   },
   {
     id: 7,
     image: `${projects_assets.OurProjects_img9}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-2",
   },
   {
@@ -62,13 +62,13 @@ const projects = [
   {
     id: 10,
     image: `${projects_assets.OurProjects_img10}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-2",
   },
   {
     id: 11,
     image: `${projects_assets.OurProjects_img11}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-1",
   },
   {
@@ -86,13 +86,13 @@ const projects = [
   {
     id: 14,
     image: `${projects_assets.OurProjects_img7}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-1",
   },
   {
     id: 15,
     image: `${projects_assets.OurProjects_img2}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-1",
   },
   {
@@ -110,13 +110,13 @@ const projects = [
   {
     id: 18,
     image: `${projects_assets.OurProjects_img8}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-1",
   },
   {
     id: 19,
     image: `${projects_assets.OurProjects_img10}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-1",
   },
   {
@@ -134,13 +134,13 @@ const projects = [
   {
     id: 22,
     image: `${projects_assets.OurProjects_img5}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-1",
   },
   {
     id: 23,
     image: `${projects_assets.OurProjects_img7}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-2",
   },
   {
@@ -158,13 +158,13 @@ const projects = [
   {
     id: 26,
     image: `${projects_assets.OurProjects_img2}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-2",
   },
   {
     id: 27,
     image: `${projects_assets.OurProjects_img4}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-2",
   },
   {
@@ -182,13 +182,13 @@ const projects = [
   {
     id: 30,
     image: `${projects_assets.OurProjects_img10}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-2",
   },
   {
     id: 31,
     image: `${projects_assets.OurProjects_img1}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-1",
   },
   {
@@ -206,19 +206,19 @@ const projects = [
   {
     id: 34,
     image: `${projects_assets.OurProjects_img7}`,
-    category: "Music Production",
+    category: "Audio Production",
     className: "col-span-2 row-span-1",
   },
   {
     id: 35,
     image: `${projects_assets.OurProjects_img9}`,
-    category: "Video",
+    category: "Video Production",
     className: "col-span-1 row-span-1",
   },
 ]
 
 export default function OurProjects() {
-  const [activeCategory, setActiveCategory] = useState("Music Production")
+  const [activeCategory, setActiveCategory] = useState("Audio Production")
 
   return (
     <section className="bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-24">

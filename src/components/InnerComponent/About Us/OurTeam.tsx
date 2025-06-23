@@ -8,24 +8,24 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Sonu raj",
-    role: "Video And Production Manager",
+    name: 'Aadarsh Yadav',
+    role: 'Founder',
+    image: `${about_assets.aadarsh_yadav}`,
+  },
+  {
+    name: 'Anurag Yadav',
+    role: 'Photography Lead',
     image: `${about_assets.OurTeam1}`,
   },
   {
-    name: "Sonu raj",
-    role: "Video And Production Manager",
-    image: `${about_assets.OurTeam1}`,
+    name: 'Sachin Yadav',
+    role: 'Manager',
+    image: `${about_assets.sachin_yadav}`,
   },
   {
-    name: "Sonu raj",
-    role: "Video And Production Manager",
-    image: `${about_assets.OurTeam1}`,
-  },
-  {
-    name: "Sonu raj",
-    role: "Video And Production Manager",
-    image: `${about_assets.OurTeam1}`,
+    name: 'Shubh Saini',
+    role: 'Editor',
+    image: `${about_assets.shubh_saini}`,
   },
 ];
 

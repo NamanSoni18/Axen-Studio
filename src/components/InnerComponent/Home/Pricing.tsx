@@ -30,7 +30,7 @@ export default function Pricing() {
                 </span>
               </h1>
               <p className="mb-8 max-w-xl text-lg text-white/80">
-                From music and video production to capturing your special
+                From audio and video production to capturing your special
                 moments, we bring your vision to life. Book now and create magic
                 with us!
               </p>

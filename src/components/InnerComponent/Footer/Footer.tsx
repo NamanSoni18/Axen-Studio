@@ -3,11 +3,10 @@ import { footer_assets } from "@/assets/Footer/footer_assets";
 import { Link } from "react-router-dom";
 
 const teamMembers = [
-  "Kumar Sanu",
-  "Aashish Sharma",
-  "Raju Kumar Das",
-  "Aditya Kumar Sharmna",
-  "Fermi Court Carlsbad, CA 92008",
+  "Aadarsh Yadav",
+  "Anurag Yadav",
+  "Sachin Yadav",
+  "Shubh Saini",
 ];
 
 const aboutLinks = [
