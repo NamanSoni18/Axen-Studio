@@ -29,9 +29,7 @@ export default function LatestProject() {
             </h2>
 
             <p className="text-lg leading-relaxed text-white/80 sm:text-xl">
-              Axen Studio offers high-quality music production, audio
-              engineering, and video editing services. We are committed to
-              delivering superior quality work that exceeds expectations.
+              Axen Studio offers high-quality audio production, video production, wedding/pre-wedding shoots and digital marketing services. We are committed to delivering superior quality work that exceeds expectations.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">

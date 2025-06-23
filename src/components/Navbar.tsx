@@ -1,5 +1,8 @@
-import { useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+"use client"
+
+import { useState } from "react"
+import { Link, Outlet, useLocation } from "react-router-dom"
+import MobileMenu from "./mobile-menu"
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -7,15 +10,24 @@ const navItems = [
   { name: "Projects", href: "/projects" },
   { name: "Connect Us", href: "/connect" },
   { name: "Services", href: "/services" },
-];
+]
 
 function Navbar() {
-  const location = useLocation();
-  const [activeItem, setActiveItem] = useState(location.pathname);
+  const location = useLocation()
+  const [activeItem, setActiveItem] = useState(location.pathname)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleClick = (href: string) => {
-    setActiveItem(href);
-  };
+    setActiveItem(href)
+  }
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
 
   return (
     <>
@@ -29,24 +41,20 @@ function Navbar() {
               </Link>
             </div>
 
-            {/* Right side navigation links */}
+            {/* Right side navigation links - Desktop */}
             <div className="hidden sm:flex sm:space-x-4">
               {navItems.map((item) => (
                 <span
                   key={item.name}
                   className={`py-2 px-3 mx-2 rounded-md ${
-                    activeItem === item.href
-                      ? "bg-white"
-                      : "hover:bg-white focus:bg-white"
+                    activeItem === item.href ? "bg-white" : "hover:bg-white focus:bg-white"
                   }`}
                 >
                   <Link
                     to={item.href}
                     onClick={() => handleClick(item.href)}
                     className={`text-lg font-medium transition-all duration-300 ease-in-out ${
-                      activeItem === item.href
-                        ? "text-gradient"
-                        : "text-white hover:text-gradient focus:text-gradient"
+                      activeItem === item.href ? "text-gradient" : "text-white hover:text-gradient focus:text-gradient"
                     }`}
                   >
                     {item.name}
@@ -54,16 +62,37 @@ function Navbar() {
                 </span>
               ))}
             </div>
+
+            {/* Hamburger menu button - Mobile */}
+            <div className="sm:hidden">
+              <button
+                onClick={toggleMobileMenu}
+                className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
+              >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Component */}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={closeMobileMenu}
+        navItems={navItems}
+        activeItem={activeItem}
+        onItemClick={handleClick}
+      />
 
       {/* This is where child routes will render */}
       <div>
         <Outlet />
       </div>
     </>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

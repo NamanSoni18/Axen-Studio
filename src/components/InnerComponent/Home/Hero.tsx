@@ -29,7 +29,7 @@ const Hero = () => {
                 <span className="text-4xl font-bold text-white">
                   <CountUp
                     from={0}
-                    to={1500}
+                    to={3300}
                     separator=""
                     direction="up"
                     duration={1}
@@ -46,7 +46,7 @@ const Hero = () => {
                   <span className="text-4xl font-bold text-white">
                     <CountUp
                       from={0}
-                      to={600}
+                      to={500}
                       separator=""
                       direction="up"
                       duration={1}
@@ -55,7 +55,7 @@ const Hero = () => {
                     +
                   </span>
                 </span>
-                <span className="text-lg text-white/70">Active customers</span>
+                <span className="text-lg text-white/70">Total Events</span>
               </div>
             </div>
           </div>

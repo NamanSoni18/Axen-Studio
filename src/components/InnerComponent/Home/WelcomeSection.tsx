@@ -14,8 +14,8 @@ const WelcomeSection = () => {
           </h1>
 
           <p className="mb-4 text-center text-lg leading-relaxed text-white/90 sm:text-lg">
-            Axen Studio brings over six years of expertise in music production, video
-            creation, graphic design, and digital marketing. We craft stunning
+            Axen Studio brings over seven years of expertise in audio production, video
+            creation, wedding shoots, and digital marketing. We craft stunning
             visuals, timeless memories, and unique designs while helping grow your
             online presence. With a focus on quality, creativity, and customer
             satisfaction, we transform your vision into reality. Let's create
@@ -26,7 +26,7 @@ const WelcomeSection = () => {
             <span className="text-lg font-medium">
               Founder{' '}
               <span className="bg-gradient-to-r from-[#ff8a00] to-[#800080] bg-clip-text text-transparent font-bold">
-                Sunidhi Jain
+                Aadarsh Yadav
               </span>
             </span>
           </div>

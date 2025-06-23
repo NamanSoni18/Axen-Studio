@@ -25,7 +25,7 @@ export default function OurStudio() {
                   alt="no vector"
                 />
                 <span className="font-bold bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text">
-                  91-2432566556
+                  9818538442/ 9911910365
                 </span>
               </div>
             </div>
@@ -37,8 +37,8 @@ export default function OurStudio() {
               Where Music Takes <br /> Shape
             </h2>
             <p className="text-gray-300 mb-8 text-base md:text-lg">
-              Axen Studio brings over six years of expertise in music production,
-              video creation, graphic design, and digital marketing. We craft
+              Axen Studio brings over seven years of expertise in audio production,
+              video production, wedding shoots, and digital marketing. We craft
               stunning visuals, timeless memories, and unique designs while
               helping grow your online presence.
             </p>
