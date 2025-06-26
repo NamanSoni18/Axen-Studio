@@ -1,5 +1,5 @@
 import hero_img1 from "./hero_img1.png";
-import hero_img2 from "./hero_img2.png";
+import hero_img2 from "./hero_img2.jpg";
 import latest_project_img1 from "./LatestProject_img1.png";
 import section2_vector from './section2_vector.svg';
 import section2_img2 from './section2_img2.png'

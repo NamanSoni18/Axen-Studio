@@ -1,3 +1,4 @@
+import { about_assets } from '@/assets/About/about_assets'
 import { home_assets } from '@/assets/home_assets'
 import { useState } from 'react'
 
@@ -16,7 +17,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Anurag Yadav',
     role: 'Photography Lead',
-    image: `${home_assets.section8_img1}`
+    image: `${about_assets.OurTeam1}`
   },
   {
     name: 'Sachin Yadav',
@@ -52,7 +53,7 @@ export default function Team() {
         </h2>
 
         <div
-          className="relative"
+          className="relative z-10"
           onMouseMove={handleMouseMove}
           onMouseLeave={() => setActiveIndex(null)}
         >

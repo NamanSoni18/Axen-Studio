@@ -19,8 +19,9 @@ const Hero = () => {
               to videos, weddings to marketing—we bring your vision to life.
             </p>
             <Link
-              to="/"
+              to="/connect"
               className="mb-12 inline-flex w-full max-w-xs items-center justify-center rounded-full bg-white px-8 py-3 text-lg font-semibold text-black transition-all hover:bg-opacity-90 sm:w-9/12"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <span className="text-gradient">Book Now</span>
             </Link>

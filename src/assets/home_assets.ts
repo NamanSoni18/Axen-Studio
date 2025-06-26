@@ -6,8 +6,8 @@ import facebook from './facebook_.png';
 import linkedin from './linkedin_.png';
 import instagram from './instagram.png';
 import section2 from './Section2.png';
-import section3 from './Section3.png';
-import section4_img1 from './section4_img1.png';
+import section3 from './Section3.jpg';
+import section4_img1 from './section4_img1.jpg';
 import section4_img2 from './section4_img2.png';
 import section4_img3 from './section4_img3.png';
 import section4_img4 from './section4_img4.png';
@@ -23,6 +23,7 @@ import sachin_yadav from './sachin-yadav.png';
 import shubh_saini from './shubh-saini.png';
 import section7_phone from './section7_phone.svg';
 import section7_map from './section7_map.svg';
+import section4_img5 from './section4_img5.jpg';
 import section7_clock from './section7_clock.svg';
 import section8_img1 from './Section8_team_img1.png';
 import section9_img1 from './section9_img1.png';
@@ -45,6 +46,7 @@ export const home_assets = {
   section4_img4,
   vector,
   mail,
+  section4_img5,
   section5_img1,
   section5_img2,
   section5_circle,

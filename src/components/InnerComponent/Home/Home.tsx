@@ -5,7 +5,7 @@ import Empowering from "./Empowering";
 import Hero from "./Hero";
 import PeopleReview from "./PeopleReview";
 import Pricing from "./Pricing";
-import RecentEvents from "./RecentEvents";
+// import RecentEvents from "./RecentEvents";
 import Team from "./Team";
 import WelcomeSection from "./WelcomeSection";
 import Footer from "../Footer/Footer";
@@ -17,7 +17,7 @@ const Home = () => {
       <WelcomeSection />
       <Empowering/>
       <Capabilities/>
-      <RecentEvents/>
+      {/* <RecentEvents/> */}
       <PeopleReview/>
       <ContactUs/>
       <Team/>

@@ -4,7 +4,7 @@ import Frame_3089 from './Frame 3089.png'
 import Vector_left_arrow from './Vector_left_arrow.svg';
 import Vector_right_arrow from './Vector_right_arrow.svg';
 import Our_Studio from './Our Studio.png'
-import OurTeam1 from './OurTeam1.png';
+import OurTeam1 from './image.jpg';
 import aadarsh_yadav from './aadarsh_yadav.png';
 import sachin_yadav from './sachin-yadav.png';
 import shubh_saini from './shubh-saini.png';

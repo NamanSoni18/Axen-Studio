@@ -49,7 +49,7 @@ export default function Hero({
             <img
               src={image1}
               alt={image1Alt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale"
             />
           </div>
         </div>
@@ -61,10 +61,9 @@ export default function Hero({
             <img
               src={image2}
               alt={image2Alt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover grayscale"
             />
           </div>
-
           {/* Bottom Right Text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">

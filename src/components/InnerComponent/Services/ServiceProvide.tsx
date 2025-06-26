@@ -20,7 +20,6 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
   title,
   titleGradient,
   description,
-  price,
   mainImage,
   yearlyProduction,
   activeCustomers,
@@ -34,21 +33,22 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
     imagePosition === "left"
       ? "lg:order-2 lg:pl-12 text-center lg:text-left"
       : "lg:order-1 lg:pr-12 text-center lg:text-right";
-  const pricePositionClass =
-    imagePosition === "left"
-      ? "bottom-4 right-4 lg:bottom-8 lg:left-8 lg:right-auto"
-      : "bottom-4 left-4 lg:bottom-8 lg:right-8 lg:left-auto";
   const iconPositionClass =
     imagePosition === "left"
       ? "top-[-20px] left-[-20px] lg:top-[-30px] lg:left-[-30px]"
       : "top-[-20px] right-[-20px] lg:top-[-30px] lg:right-[-30px]";
+
+  // Add alignment classes for description and stats
+  const descriptionAlignClass = imagePosition === "left" ? "mx-auto lg:mx-0" : "mx-auto lg:ml-auto lg:mr-0";
+  const statsAlignClass = imagePosition === "left" ? "justify-center lg:justify-start" : "justify-center lg:justify-end";
+  const galleryAlignClass = imagePosition === "left" ? "justify-center lg:justify-start" : "justify-center lg:justify-end";
 
   const galleryItemBaseClass = "w-[calc(50%-0.5rem)] sm:w-[calc(33.33%-0.66rem)] h-28 md:h-32 rounded-lg";
 
   const viewMoreButton = (
     <div className={`${galleryItemBaseClass} group bg-white flex flex-col items-center justify-center text-center p-2`}>
       {viewMoreIconSvg && (
-        <div className="bg-gradient-to-r transition-transform duration-300 rotate-[-30deg] group-hover:rotate-0 from-pink-500 to-orange-50  0 p-2 rounded-full mb-1">
+        <div className="bg-gradient-to-r transition-transform duration-300 rotate-[-30deg] group-hover:rotate-0 from-pink-500 to-orange-500 p-2 rounded-full mb-1">
           {viewMoreIconSvg}
         </div>
       )}
@@ -90,12 +90,6 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
             </div>
           </div>
         )}
-        <div className={`absolute bg-black bg-opacity-70 px-4 py-2 lg:px-6 lg:py-3 rounded-lg text-center ${pricePositionClass}`}>
-          <span className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
-            ${price}
-          </span>
-          <span className="text-xl lg:text-2xl text-white">/hr</span>
-        </div>
       </div>
 
       <div className={`w-full lg:w-7/12 ${contentOrderClass}`}>
@@ -112,10 +106,10 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
             )}
           </span>
         </h2>
-        <p className="text-gray-300 mb-8 text-base md:text-lg max-w-xl mx-auto lg:mx-0">{description}</p>
+        <p className={`text-gray-300 mb-8 text-base md:text-lg max-w-xl ${descriptionAlignClass}`}>{description}</p>
 
-        <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 mb-10 justify-center lg:justify-start">
-          <div>
+        <div className={`flex flex-col sm:flex-row gap-8 sm:gap-12 mb-10 ${statsAlignClass}`}>
+          <div className={imagePosition === "right" ? "text-center lg:text-right" : "text-center lg:text-left"}>
             <span className="text-4xl md:text-5xl font-bold text-white">
               <CountUp
                 from={0}
@@ -129,7 +123,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
             </span>
             <p className="text-gray-400">Yearly Production</p>
           </div>
-          <div>
+          <div className={imagePosition === "right" ? "text-center lg:text-right" : "text-center lg:text-left"}>
             <span className="text-4xl md:text-5xl font-bold text-white">
               <CountUp
                 from={0}
@@ -145,7 +139,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-3 gap-4 justify-center lg:justify-start">
+        <div className={`flex gap-4 ${galleryAlignClass}`}>
           {imagePosition === 'right' && viewMoreButton}
           {galleryImageElements}
           {imagePosition === 'left' && viewMoreButton}
@@ -193,10 +187,10 @@ const ServiceProvide = () => {
         <ServiceItemCard
           title="Video Production"
           titleGradient="bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600"
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          description="From cinematic storytelling to promotional content, we create visually stunning videos that captivate audiences. Our expert team handles everything from concept to post-production with state-of-the-art equipment."
           price="55"
-          yearlyProduction="250"
-          activeCustomers="100"
+          yearlyProduction="180"
+          activeCustomers="85"
           mainImage={services_assets.frame_3054}
           galleryImages={[
             services_assets.frame_3068,
@@ -207,14 +201,14 @@ const ServiceProvide = () => {
           viewMoreIconSvg={defaultLogoIcon}
         />
 
-        {/* Music Production Card - Image on Right */}
+        {/* Audio Production Card - Image on Right */}
         <ServiceItemCard
-          title="Music Production"
+          title="Audio Production"
           titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          description="Professional music production, audio engineering, and sound design services. Our state-of-the-art studio delivers crystal-clear recordings and polished tracks that meet industry standards."
           price="55"
-          yearlyProduction="250"
-          activeCustomers="100"
+          yearlyProduction="320"
+          activeCustomers="150"
           mainImage={services_assets.frame_3054_3}
           galleryImages={[
             services_assets.frame_3069_3,
@@ -228,10 +222,10 @@ const ServiceProvide = () => {
         <ServiceItemCard
           title="Wedding Shoots"
           titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          description="Capturing your most precious moments with artistic flair and emotional depth. From intimate ceremonies to grand celebrations, we preserve memories that last a lifetime with our signature wedding photography style."
           price="55"
-          yearlyProduction="250"
-          activeCustomers="100"
+          yearlyProduction="95"
+          activeCustomers="75"
           mainImage={services_assets.frame_3054_4_1}
           galleryImages={[
             services_assets.frame_3068_4_2,
@@ -244,10 +238,10 @@ const ServiceProvide = () => {
         <ServiceItemCard
           title="Digital Marketing"
           titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
-          description="Axen Studio offers high-quality music production, audio engineering, and video editing services. We are committed to delivering superior quality work that exceeds expectations"
+          description="Comprehensive digital marketing strategies that amplify your brand presence. From social media management to content creation and SEO optimization, we help businesses grow their online footprint and reach target audiences effectively."
           price="55"
-          yearlyProduction="250"
-          activeCustomers="100"
+          yearlyProduction="220"
+          activeCustomers="120"
           mainImage={services_assets.frame_3054_5_1}
           galleryImages={[
             services_assets.frame_3069_5_2,

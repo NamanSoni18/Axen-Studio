@@ -15,8 +15,8 @@ const Empowering = () => {
       </div>
 
       {/* Text Content */}
-      <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
-        <h1 className="max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl md:text-4xl lg:text-5xl">
+      <div className="absolute z-10 left-1/2 top-[20%] flex w-full -translate-x-1/2 justify-center px-4">
+        <h1 className="max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl md:text-4xl lg:text-5xl text-center">
           Empowering Individuals to Capture Unforgettable Moments
         </h1>
       </div>

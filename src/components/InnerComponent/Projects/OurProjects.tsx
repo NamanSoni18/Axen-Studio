@@ -2,7 +2,7 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { projects_assets } from "@/assets/Projects/projects_assets"
 
-const categories = ["Audio Production", "Wedding shoot", "Video Production", "Graphic Design"]
+const categories = ["Wedding shoot", "Video Production", "Digital Marketing"]
 
 const projects = [
   {
@@ -26,7 +26,7 @@ const projects = [
   {
     id: 4,
     image: `${projects_assets.OurProjects_img2}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-1",
   },
   {
@@ -50,7 +50,7 @@ const projects = [
   {
     id: 8,
     image: `${projects_assets.OurProjects_img6}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-1",
   },
   {
@@ -74,7 +74,7 @@ const projects = [
   {
     id: 12,
     image: `${projects_assets.OurProjects_img3}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-1",
   },
   {
@@ -98,7 +98,7 @@ const projects = [
   {
     id: 16,
     image: `${projects_assets.OurProjects_img4}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-2",
   },
   {
@@ -122,7 +122,7 @@ const projects = [
   {
     id: 20,
     image: `${projects_assets.OurProjects_img1}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-2",
   },
   {
@@ -146,7 +146,7 @@ const projects = [
   {
     id: 24,
     image: `${projects_assets.OurProjects_img9}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-1",
   },
   {
@@ -170,7 +170,7 @@ const projects = [
   {
     id: 28,
     image: `${projects_assets.OurProjects_img6}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-1",
   },
   {
@@ -194,7 +194,7 @@ const projects = [
   {
     id: 32,
     image: `${projects_assets.OurProjects_img3}`,
-    category: "Graphic Design",
+    category: "Digital Marketing",
     className: "col-span-2 row-span-1",
   },
   {

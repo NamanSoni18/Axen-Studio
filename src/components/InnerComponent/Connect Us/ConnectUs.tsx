@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div>
       <Hero
-        title="Connect Us"
+        title="Contact Us"
         bottomTitle="Transforming Moments into"
         gradientText="Perfection"
         image1={connect_assets.hero_img1}

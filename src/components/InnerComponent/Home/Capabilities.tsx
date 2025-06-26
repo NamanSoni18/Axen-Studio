@@ -16,7 +16,7 @@ const capabilities = [
   {
     title: "Pre Wedding Shoots",
     description: "Creating memories to cherish for a lifetime",
-    image: `${home_assets.section4_img3}`,
+    image: `${home_assets.section4_img5}`,
     gradient: "from-[#FF69B4] to-[#FF8C00]",
   },
   {

@@ -1,3 +1,4 @@
+import { Youtube, Instagram, Facebook } from 'lucide-react';
 import { home_assets } from '@/assets/home_assets';
 import { Link } from 'react-router-dom';
 
@@ -33,30 +34,30 @@ const WelcomeSection = () => {
 
           <div className="flex items-center justify-center gap-6 mb-8">
             <Link
-              to="https://linkedin.com"
+              to="https://www.youtube.com/@axenstudio"
               className="rounded-full bg-white p-3 transition-transform hover:scale-110"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={home_assets.linkedin} className="w-6 h-6" alt="LinkedIn" />
-              <span className="sr-only">LinkedIn</span>
+              <Youtube className="w-6 h-6 text-red-600" />
+              <span className="sr-only">YouTube</span>
             </Link>
             <Link
-              to="https://instagram.com"
+              to="https://www.instagram.com/axenstudio"
               className="rounded-full bg-white p-3 transition-transform hover:scale-110"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={home_assets.instagram} className="w-6 h-6" alt="Instagram" />
+              <Instagram className="w-6 h-6 text-pink-500" />
               <span className="sr-only">Instagram</span>
             </Link>
             <Link
-              to="https://facebook.com"
+              to="https://www.facebook.com/profile.php?id=100093608952540"
               className="rounded-full bg-white p-3 transition-transform hover:scale-110"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={home_assets.facebook} className="w-6 h-6" alt="Facebook" />
+              <Facebook className="w-6 h-6 text-blue-600" />
               <span className="sr-only">Facebook</span>
             </Link>
           </div>

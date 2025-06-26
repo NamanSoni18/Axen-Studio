@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link, Outlet, useLocation } from "react-router-dom"
 import MobileMenu from "./mobile-menu"
 
@@ -8,17 +8,24 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Projects", href: "/projects" },
-  { name: "Connect Us", href: "/connect" },
+  { name: "Contact Us", href: "/connect" },
   { name: "Services", href: "/services" },
 ]
 
 function Navbar() {
   const location = useLocation()
   const [activeItem, setActiveItem] = useState(location.pathname)
+
+  // Update active item when location changes
+  useEffect(() => {
+    setActiveItem(location.pathname)
+  }, [location.pathname])
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleClick = (href: string) => {
     setActiveItem(href)
+    // Scroll to top when navigating
+    window.scrollTo(0, 0)
   }
 
   const toggleMobileMenu = () => {

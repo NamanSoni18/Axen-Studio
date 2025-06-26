@@ -1,4 +1,5 @@
 import { about_assets } from "@/assets/About/about_assets";
+import { Link } from "react-router-dom";
 
 export default function OurStudio() {
   return (
@@ -42,11 +43,15 @@ export default function OurStudio() {
               stunning visuals, timeless memories, and unique designs while
               helping grow your online presence.
             </p>
-            <button className="px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition-colors group">
+            <Link 
+              to="/connect"
+              onClick={() => window.scrollTo(0, 0)}
+              className="px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition-colors group"
+            >
               <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text group-hover:bg-none group-hover:text-black">
                 Book Now
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

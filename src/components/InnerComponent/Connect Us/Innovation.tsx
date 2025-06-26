@@ -4,15 +4,15 @@ import { projects_assets } from "@/assets/Projects/projects_assets";
 const achievements = [
   {
     id: 1,
-    text: "Receiving industry awards for music production",
+    text: "7+ years of expertise in creative production services",
   },
   {
     id: 2,
-    text: "Receiving industry awards for excellence in music production",
+    text: "3300+ followers on Instagram",
   },
   {
     id: 3,
-    text: "Receiving industry awards for excellence in music production",
+    text: "Hundreds of satisfied customers served",
   },
 ];
 
@@ -34,8 +34,10 @@ const Innovation = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-300 max-w-lg mx-auto lg:mx-0">
-              From music and video production to capturing your special moments,
-              we bring your vision to life. Book now and create magic with us.
+              At Axen Studio, we combine cutting-edge technology with artistic vision 
+              to deliver exceptional results across music production, video creation, 
+              wedding photography, and digital marketing. Experience the perfect blend 
+              of creativity and innovation.
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-4">

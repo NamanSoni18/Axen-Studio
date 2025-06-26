@@ -1,5 +1,5 @@
 import Hero_Projects from './Hero'
-import LatestProject from './LatestProject'
+// import LatestProject from './LatestProject'
 import OurProjects from './OurProjects'
 import Footer from '../Footer/Footer'
 
@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div>
       <Hero_Projects/>
-      <LatestProject/>
+      {/* <LatestProject/> */}
       <OurProjects/>
       <Footer/>
     </div>
