@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-8 overflow-x-hidden">
       <Hero />
       <WelcomeSection />
       <Empowering/>

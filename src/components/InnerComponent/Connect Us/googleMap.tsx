@@ -22,7 +22,7 @@ const GoogleMap = () => {
 
     const initMap = () => {
       if (mapRef.current && window.google) {
-        const location = { lat: 21.2514, lng: 81.6296 };
+        const location = { lat: 28.633750, lng: 77.091682 };
         const map = new google.maps.Map(mapRef.current, {
           center: location,
           zoom: 15,

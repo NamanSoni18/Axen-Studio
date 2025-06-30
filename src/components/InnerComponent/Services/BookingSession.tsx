@@ -13,7 +13,7 @@ const pricingItems = [
 
 const BookingSession = () => {
   return (
-    <div className="bg-black text-white py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 min-h-screen flex flex-col items-center justify-center">
+     <div className="bg-black text-white py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 min-h-screen flex flex-col items-center justify-center">
       <div className="container mx-auto max-w-7xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 sm:mb-10 md:mb-12 text-center">
           <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text">

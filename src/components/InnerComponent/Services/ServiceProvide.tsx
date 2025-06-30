@@ -190,7 +190,7 @@ const ServiceProvide = () => {
           description="From cinematic storytelling to promotional content, we create visually stunning videos that captivate audiences. Our expert team handles everything from concept to post-production with state-of-the-art equipment."
           price="55"
           yearlyProduction="180"
-          activeCustomers="85"
+          activeCustomers="100"
           mainImage={services_assets.frame_3054}
           galleryImages={[
             services_assets.frame_3068,
@@ -224,8 +224,8 @@ const ServiceProvide = () => {
           titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
           description="Capturing your most precious moments with artistic flair and emotional depth. From intimate ceremonies to grand celebrations, we preserve memories that last a lifetime with our signature wedding photography style."
           price="55"
-          yearlyProduction="95"
-          activeCustomers="75"
+          yearlyProduction="50"
+          activeCustomers="500"
           mainImage={services_assets.frame_3054_4_1}
           galleryImages={[
             services_assets.frame_3068_4_2,
@@ -240,8 +240,8 @@ const ServiceProvide = () => {
           titleGradient="bg-gradient-to-r from-pink-500 to-purple-600"
           description="Comprehensive digital marketing strategies that amplify your brand presence. From social media management to content creation and SEO optimization, we help businesses grow their online footprint and reach target audiences effectively."
           price="55"
-          yearlyProduction="220"
-          activeCustomers="120"
+          yearlyProduction="100"
+          activeCustomers="50"
           mainImage={services_assets.frame_3054_5_1}
           galleryImages={[
             services_assets.frame_3069_5_2,
