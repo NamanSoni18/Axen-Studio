@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { projects_assets } from "@/assets/Projects/projects_assets"
+// import { projects_assets } from "@/assets/Projects/projects_assets"
 import { wedding_assets } from "@/assets/Wedding Shoots/wedding_assets"
 import { prewedding_assets } from "@/assets/Pre Wedding Shoots/prewedding_assets"
 
