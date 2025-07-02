@@ -95,8 +95,10 @@ const CountUp: React.FC<CountUpProps> = ({
           maximumFractionDigits: 0,
         };
 
+        // Convert latest to number before calling toFixed
+        const numericValue = typeof latest === "number" ? latest : Number(latest);
         const formattedNumber = Intl.NumberFormat("en-US", options).format(
-          Number(latest.toFixed(0))
+          Number(numericValue.toFixed(0))
         );
 
         ref.current.textContent = separator
