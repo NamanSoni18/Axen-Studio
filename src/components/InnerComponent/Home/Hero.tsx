@@ -81,6 +81,7 @@ const Hero = () => {
             {/* Below Image */}
             <div className="absolute hidden lg:block -bottom-12 -right-12 z-0 h-full w-full overflow-hidden sm:-bottom-24 sm:-right-48 lg:-bottom-[100px] lg:-right-[300px]">
               <img
+                loading="lazy"
                 src={home_assets.home_img4}
                 alt="No Image"
                 className="h-full w-full object-cover opacity-90"

@@ -60,6 +60,7 @@ export default function Capabilities() {
                 <img
                   src={capability.image}
                   alt={capability.title}
+                  loading="lazy"
                   className="h-full w-full object-cover filter grayscale transition-all duration-500 ease-in-out group-hover:grayscale-0 group-hover:scale-110"
                 />
               </div>
@@ -69,6 +70,7 @@ export default function Capabilities() {
                 <img
                   src={home_assets.vector}
                   alt="Arrow Icon"
+                  loading="lazy"
                   className="h-5 w-5"
                 />
               </div>

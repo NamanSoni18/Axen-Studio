@@ -14,7 +14,8 @@ export default function ContactUs() {
           {/* Location */}
           <div className="flex flex-col items-center">
             <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full">
-              <img src={home_assets.section7_map} alt="No Image" className="h-14 w-14" />
+              <img src={home_assets.section7_map} alt="No Image" loading="lazy"
+                className="h-14 w-14" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
               Axen Studio
@@ -27,7 +28,7 @@ export default function ContactUs() {
           {/* Contact */}
           <div className="flex flex-col items-center">
             <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full">
-              <img src={home_assets.section7_phone} alt="No Image" className="h-14 w-14" />
+              <img src={home_assets.section7_phone} alt="No Image" loading="lazy" className="h-14 w-14" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
               Connect Us
@@ -40,7 +41,7 @@ export default function ContactUs() {
           {/* Hours */}
           <div className="flex flex-col items-center">
             <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full">
-              <img src={home_assets.section7_clock} alt="No Image" className="h-14 w-14" />
+              <img src={home_assets.section7_clock} alt="No Image" loading="lazy" className="h-14 w-14" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
               Working Days

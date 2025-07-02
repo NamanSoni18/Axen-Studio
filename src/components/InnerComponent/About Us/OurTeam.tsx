@@ -51,6 +51,7 @@ export default function TeamSection() {
               <img
                 src={member.image || "/placeholder.svg"}
                 alt={member.name}
+                loading="lazy"
                 className="w-full h-full object-cover grayscale transition-transform duration-300 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />

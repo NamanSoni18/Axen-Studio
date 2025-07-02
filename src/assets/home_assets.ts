@@ -25,7 +25,7 @@ import section7_phone from './section7_phone.svg';
 import section7_map from './section7_map.svg';
 import section4_img5 from './section4_img5.jpg';
 import section7_clock from './section7_clock.svg';
-import section8_img1 from './Section8_team_img1.png';
+// import section8_img1 from './Section8_team_img1.png';
 import section9_img1 from './section9_img1.png';
 import aboutus_section1_img1 from './About_section1_img1.png';
 
@@ -58,7 +58,7 @@ export const home_assets = {
   section7_phone,
   section7_map,
   section7_clock,
-  section8_img1,
+  // section8_img1,
   section9_img1,
   aboutus_section1_img1
 }

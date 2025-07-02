@@ -65,6 +65,7 @@ export default function Pricing() {
                 <img
                   src={home_assets.vector}
                   className="w-6 h-6 sm:w-8 sm:h-8 bg-white hover:rotate-[29deg] transition-transform duration-300 rounded-full p-[3px] sm:p-[4px] mx-auto sm:mx-0"
+                  loading="lazy"
                   alt=""
                 />
               </div>
@@ -106,6 +107,7 @@ export default function Pricing() {
             <img
               src={home_assets.section9_img1}
               alt="Photographer with camera"
+              loading="lazy"
               className="h-full w-full rounded-2xl object-cover object-center"
             />
             {/* Gradient Overlay */}

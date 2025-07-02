@@ -19,7 +19,7 @@ const ContactForm = () => {
     setSubmitStatus("");
 
     try {
-      const response = await fetch('https://formspree.io/f/xkgbnavl', {
+      const response = await fetch('https://formspree.io/f/mkgbegav', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,6 +57,7 @@ const ContactForm = () => {
           <img
             src={connect_assets.section3_img1}
             alt="Contact"
+            loading="lazy"
             className="w-full h-auto object-cover rounded-xl aspect-[4/5]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
@@ -65,6 +66,7 @@ const ContactForm = () => {
               <img
                 src={home_assets.vector}
                 alt="Arrow Icon"
+                loading="lazy"
                 className="h-8 w-8"
               />
             </div>
@@ -85,7 +87,7 @@ const ContactForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <label className="flex font-semibold text-lg sm:text-xl items-center gap-2">
-                <img src={connect_assets.user_icon} alt="User Icon" className="w-7 h-7" />
+                <img src={connect_assets.user_icon} alt="User Icon" loading="lazy" className="w-7 h-7" />
                 Full name
               </label>
               <div className="relative rounded-lg bg-gradient-to-r from-[#ff8a00] to-[#ff2e7a] p-0.5">
@@ -104,7 +106,7 @@ const ContactForm = () => {
 
             <div className="space-y-2">
               <label className="flex font-semibold text-lg sm:text-xl items-center gap-2">
-                <img src={connect_assets.email_icon} alt="Email Icon" className="w-7 h-7" />
+                <img src={connect_assets.email_icon} alt="Email Icon" loading="lazy" className="w-7 h-7" />
                 Email
               </label>
               <div className="relative rounded-lg bg-gradient-to-r from-[#ff8a00] to-[#ff2e7a] p-0.5">
@@ -123,7 +125,7 @@ const ContactForm = () => {
 
             <div className="space-y-2">
               <label className="flex font-semibold text-lg sm:text-xl items-center gap-2">
-                <img src={connect_assets.phone_icon} alt="Phone Icon" className="w-7 h-7" />
+                <img src={connect_assets.phone_icon} alt="Phone Icon" loading="lazy" className="w-7 h-7" />
                 Phone Number
               </label>
               <div className="relative rounded-lg bg-gradient-to-r from-[#ff8a00] to-[#ff2e7a] p-0.5">
@@ -142,7 +144,7 @@ const ContactForm = () => {
 
             <div className="space-y-2">
               <label className="flex font-semibold text-lg sm:text-xl items-center gap-2">
-                <img src={connect_assets.message_icon} alt="Message Icon" className="w-7 h-7" />
+                <img src={connect_assets.message_icon} alt="Message Icon" loading="lazy" className="w-7 h-7" />
                 Message
               </label>
               <div className="relative rounded-lg bg-gradient-to-r from-[#ff8a00] to-[#ff2e7a] p-0.5">

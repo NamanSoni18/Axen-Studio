@@ -89,6 +89,7 @@ export default function Team() {
                 <img
                   src={teamMembers[activeIndex].image}
                   alt={teamMembers[activeIndex].name}
+                  loading="lazy"
                   className="aspect-square w-full object-cover"
                 />
                 <div className="">

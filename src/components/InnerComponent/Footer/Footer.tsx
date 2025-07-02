@@ -14,7 +14,7 @@ const aboutLinks = [
   { text: "About Us", href: "/about" },
   { text: "Services", href: "/services" },
   { text: "Projects", href: "/projects" },
-  { text: "Connect Us", href: "/connect" },
+  { text: "Contact Us", href: "/connect" },
 ];
 
 const socialLinks = [
@@ -34,6 +34,7 @@ export default function Footer() {
           <img
             src={footer_assets.footer_img1}
             alt="Axen Studios Logo"
+            loading="lazy"
             className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain animate-spin [animation-duration:10s]"
           />
         </div>

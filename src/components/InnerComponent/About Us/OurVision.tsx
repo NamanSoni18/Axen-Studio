@@ -59,6 +59,7 @@ export default function VisionSection() {
                 <img
                   src={about_assets.Vector_left_arrow}
                   alt="Arrow Icon"
+                  loading="lazy"
                   onClick={previousSlide}
                   className="h-6 w-6"
                 />
@@ -67,6 +68,7 @@ export default function VisionSection() {
                 <img
                   src={about_assets.Vector_right_arrow}
                   alt="Arrow Icon"
+                  loading="lazy"
                   onClick={nextSlide}
                   className="h-6 w-6"
                 />
@@ -86,6 +88,7 @@ export default function VisionSection() {
               <img
                 src={about_assets.Frame_3089}
                 alt="Studio work"
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 256px"
               />

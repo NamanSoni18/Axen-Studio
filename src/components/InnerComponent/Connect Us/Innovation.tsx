@@ -50,6 +50,7 @@ const Innovation = () => {
                     <img
                       src={projects_assets.section2_vector}
                       className="h-7 w-7 sm:h-8 sm:w-8"
+                      loading="lazy"
                       alt="Checkmark icon"
                     />
                   </div>
@@ -66,6 +67,7 @@ const Innovation = () => {
             <img
               src={connect_assets.section2_img1}
               alt="Innovation"
+              loading="lazy"
               className="w-full max-w-md lg:max-w-none h-auto object-contain rounded-lg"
             />
           </div>

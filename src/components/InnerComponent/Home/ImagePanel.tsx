@@ -9,6 +9,7 @@ export function ImagePanel({ imageUrl, label, className = "" }: ImagePanelProps)
     <div className={`relative overflow-hidden ${className}`}>
       <div className="relative h-full w-full">
         <img
+          loading="lazy"
           src={imageUrl}
           alt={label || "Studio work"}
           className="h-full w-full object-cover filter grayscale"

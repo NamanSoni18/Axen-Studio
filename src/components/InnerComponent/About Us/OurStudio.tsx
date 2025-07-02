@@ -11,6 +11,7 @@ export default function OurStudio() {
             <img
               src={about_assets.frame_3082} // Top-left image
               alt="Studio Image 1"
+              loading="lazy"
               className="w-full rounded-lg shadow-lg"
             />
             {/* Record Your Own Hit Section */}
@@ -23,6 +24,7 @@ export default function OurStudio() {
                 <img
                   src={about_assets.vector}
                   className="w-5 h-5"
+                  loading="lazy"
                   alt="no vector"
                 />
                 <span className="font-bold bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text">

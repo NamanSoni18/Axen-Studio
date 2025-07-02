@@ -66,6 +66,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
       <img
         src={imgSrc}
         alt={`Gallery image ${index + 1} for ${title}`}
+        loading="lazy"
         className="w-full h-full object-cover"
       />
     </div>
@@ -77,6 +78,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
         <img
           src={mainImage}
           alt={`${title} Setup`}
+          loading="lazy"
           className="rounded-lg object-cover w-full aspect-[4/5]"
         />
         {logoIconSvg && (
@@ -85,6 +87,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
               <img
                 src={home_assets.vector}
                 alt="Arrow Icon"
+                loading="lazy"
                 className="h-6 w-6 lg:h-8 lg:w-8"
               />
             </div>

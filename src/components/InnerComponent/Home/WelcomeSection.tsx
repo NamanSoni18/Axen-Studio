@@ -67,6 +67,7 @@ const WelcomeSection = () => {
             <img
               src={home_assets.section2}
               alt="Featured Axen Studio"
+              loading="lazy"
               className="mx-auto max-w-full rounded-lg shadow-lg"
             />
           </div>

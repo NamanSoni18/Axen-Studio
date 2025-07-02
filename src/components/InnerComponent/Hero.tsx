@@ -49,6 +49,7 @@ export default function Hero({
             <img
               src={image1}
               alt={image1Alt}
+              loading="lazy"
               className="w-full h-full object-cover grayscale"
             />
           </div>
@@ -61,6 +62,7 @@ export default function Hero({
             <img
               src={image2}
               alt={image2Alt}
+              loading="lazy"
               className="w-full h-full object-cover grayscale"
             />
           </div>
