@@ -35,13 +35,13 @@ export default function PeopleReview() {
 	const totalPages = Math.ceil(reviews.length / reviewsPerPage)
 
 	const nextReviews = () => {
-		setCurrentIndex((prevIndex) => 
+		setCurrentIndex((prevIndex) =>
 			prevIndex + reviewsPerPage >= reviews.length ? 0 : prevIndex + reviewsPerPage
 		)
 	}
 
 	const prevReviews = () => {
-		setCurrentIndex((prevIndex) => 
+		setCurrentIndex((prevIndex) =>
 			prevIndex === 0 ? reviews.length - reviewsPerPage : prevIndex - reviewsPerPage
 		)
 	}
@@ -58,42 +58,10 @@ export default function PeopleReview() {
 							People Reviews
 						</span>
 					</h2>
-					{/* Navigation Arrows */}
-					<div className="flex items-center gap-2 sm:gap-4">
-						<button
-							onClick={prevReviews}
-							className="group p-2 sm:p-3 rounded-full bg-gradient-to-r from-[#ff8a00] via-[#ff2e7a] to-[#ff007a] hover:shadow-lg transition-all duration-300 hover:scale-110"
-						>
-							<svg 
-								className="w-5 h-5 sm:w-6 sm:h-6 text-white transform rotate-180 group-hover:scale-110 transition-transform" 
-								fill="none" 
-								stroke="currentColor" 
-								viewBox="0 0 24 24"
-							>
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-							</svg>
-						</button>
-						<span className="text-white/70 text-xs sm:text-sm">
-							{Math.floor(currentIndex / reviewsPerPage) + 1} / {totalPages}
-						</span>
-						<button
-							onClick={nextReviews}
-							className="group p-2 sm:p-3 rounded-full bg-gradient-to-r from-[#ff8a00] via-[#ff2e7a] to-[#ff007a] hover:shadow-lg transition-all duration-300 hover:scale-110"
-						>
-							<svg 
-								className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform" 
-								fill="none" 
-								stroke="currentColor" 
-								viewBox="0 0 24 24"
-							>
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-							</svg>
-						</button>
-					</div>
 				</div>
 
 				{/* Reviews Container */}
-				<div className="relative overflow-x-hidden">
+				<div className="relative overflow-x-hidden w-full">
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={currentIndex}
@@ -144,20 +112,51 @@ export default function PeopleReview() {
 					</AnimatePresence>
 				</div>
 
-				{/* Pagination Dots */}
-				<div className="flex justify-center mt-6 xs:mt-8 gap-1.5 xs:gap-2">
+				{/* Pagination Dots BELOW the reviews */}
+				<div className="flex justify-center w-full mt-8 gap-1.5 xs:gap-2">
 					{Array.from({ length: totalPages }, (_, i) => (
 						<button
 							key={i}
 							onClick={() => setCurrentIndex(i * reviewsPerPage)}
-							className={`w-2.5 h-2.5 xs:w-3 xs:h-3 rounded-full transition-all duration-300 ${
-								Math.floor(currentIndex / reviewsPerPage) === i
+							className={`w-2.5 h-2.5 xs:w-3 xs:h-3 rounded-full transition-all duration-300 ${Math.floor(currentIndex / reviewsPerPage) === i
 									? 'bg-gradient-to-r from-[#ff8a00] to-[#ff007a] scale-125'
 									: 'bg-white/30 hover:bg-white/50'
-							}`}
+								}`}
 						/>
 					))}
 				</div>
+			</div>
+			{/* Navigation Arrows - CENTERED BELOW DOTS */}
+			<div className="flex justify-center items-center gap-2 sm:gap-4 mt-4">
+				<button
+					onClick={prevReviews}
+					className="group p-2 sm:p-3 rounded-full bg-gradient-to-r from-[#ff8a00] via-[#ff2e7a] to-[#ff007a] hover:shadow-lg transition-all duration-300 hover:scale-110"
+				>
+					<svg
+						className="w-5 h-5 sm:w-6 sm:h-6 text-white transform rotate-180 group-hover:scale-110 transition-transform"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+					</svg>
+				</button>
+				<span className="text-white/70 text-xs sm:text-sm">
+					{Math.floor(currentIndex / reviewsPerPage) + 1} / {totalPages}
+				</span>
+				<button
+					onClick={nextReviews}
+					className="group p-2 sm:p-3 rounded-full bg-gradient-to-r from-[#ff8a00] via-[#ff2e7a] to-[#ff007a] hover:shadow-lg transition-all duration-300 hover:scale-110"
+				>
+					<svg
+						className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+					</svg>
+				</button>
 			</div>
 		</section>
 	)

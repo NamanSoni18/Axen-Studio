@@ -1,6 +1,7 @@
 import { Youtube, Instagram, Facebook, Mail } from "lucide-react";
 import { footer_assets } from "@/assets/Footer/footer_assets";
 import { Link } from "react-router-dom";
+import CircularText from "@/components/reactBits/CircularText/CircularText";
 
 const teamMembers = [
   "Aadarsh Yadav",
@@ -31,11 +32,20 @@ export default function Footer() {
       <div className="flex items-center w-full py-4 sm:py-6 px-4">
         <div className="flex-1 h-[1px] bg-gray-300" />
         <div className="mx-3 sm:mx-6">
-          <img
+          {/* <img
             src={footer_assets.footer_img1}
             alt="Axen Studios Logo"
             loading="lazy"
             className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain animate-spin [animation-duration:10s]"
+          /> */}
+          <CircularText
+            text="Seven Year Experience"
+            onHover="speedUp"
+            spinDuration={20}
+            className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32"
+            radius={72}
+            imageUrl={footer_assets.axen_logo} // Your image path
+            imageSize={100} // Adjust size as needed
           />
         </div>
         <div className="flex-1 h-[1px] bg-gray-300" />
@@ -53,11 +63,10 @@ export default function Footer() {
               {teamMembers.map((member, index) => (
                 <li
                   key={index}
-                  className={`text-gray-400 text-sm sm:text-base ${
-                    index === teamMembers.length - 1
-                      ? "text-xs sm:text-sm mt-3 sm:mt-4"
-                      : ""
-                  }`}
+                  className={`text-gray-400 text-sm sm:text-base ${index === teamMembers.length - 1
+                    ? "text-xs sm:text-sm mt-3 sm:mt-4"
+                    : ""
+                    }`}
                 >
                   {member}
                 </li>
