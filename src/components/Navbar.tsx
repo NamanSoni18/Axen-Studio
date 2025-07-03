@@ -47,20 +47,20 @@ function Navbar() {
             </div>
 
             {/* Right side navigation links - Desktop */}
-            <div className="hidden sm:flex sm:space-x-4">
+            <div className="hidden lg:flex lg:space-x-4">
               {navItems.map((item) => (
                 <span
                   key={item.name}
-                  className={`py-2 px-3 mx-2 rounded-md ${
-                    activeItem === item.href ? "bg-white" : "hover:bg-white focus:bg-white"
-                  }`}
+                  className={`py-2 px-3 mx-2 rounded-md ${activeItem === item.href ? "bg-white" : "hover:bg-white focus:bg-white"
+                    }`}
                 >
                   <Link
                     to={item.href}
                     onClick={() => handleClick(item.href)}
-                    className={`text-lg font-medium transition-all duration-300 ease-in-out ${
-                      activeItem === item.href ? "text-gradient" : "text-white hover:text-gradient focus:text-gradient"
-                    }`}
+                    className={`py-2 px-3 rounded-md text-lg font-medium transition-colors duration-200 ease-in-out ${activeItem === item.href
+                        ? "bg-white text-gradient"
+                        : "text-white hover:bg-white hover:text-gradient focus:bg-white focus:text-gradient"
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -69,7 +69,7 @@ function Navbar() {
             </div>
 
             {/* Hamburger menu button - Mobile */}
-            <div className="sm:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={toggleMobileMenu}
                 className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"

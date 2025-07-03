@@ -27,9 +27,21 @@ export default function OurStudio() {
                   loading="lazy"
                   alt="no vector"
                 />
-                <span className="font-bold bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text">
-                  9818538442/ 9911910365
-                </span>
+                <div className="font-bold">
+                  <a
+                    href="tel:9818538442"
+                    className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text hover:underline"
+                  >
+                    9818538442
+                  </a>
+                  <span className="text-gray-400"> / </span>
+                  <a
+                    href="tel:9911910365"
+                    className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text hover:underline"
+                  >
+                    9911910365
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -45,13 +57,13 @@ export default function OurStudio() {
               stunning visuals, timeless memories, and unique designs while
               helping grow your online presence.
             </p>
-            <Link 
+            <Link
               to="/connect"
               onClick={() => window.scrollTo(0, 0)}
               className="px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition-colors group"
             >
               <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text group-hover:bg-none group-hover:text-black">
-                Book Now
+                Contact Us
               </span>
             </Link>
           </div>

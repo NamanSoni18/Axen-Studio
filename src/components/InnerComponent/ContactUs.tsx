@@ -33,9 +33,16 @@ export default function ContactUs() {
             <h3 className="mb-2 text-xl font-bold text-white">
               Contact Us
             </h3>
-            <p className="text-white">
-              9818538442 / 9911910365
-            </p>
+            <div className="space-y-1 text-white">
+              <p>
+                <a href="tel:9818538442" className="transition-colors hover:text-gray-300">9818538442</a> / <a href="tel:9911910365" className="transition-colors hover:text-gray-300">9911910365</a>
+              </p>
+              <p>
+                <a href="mailto:axenstudioteam@gmail.com" className="transition-colors hover:text-gray-300">
+                  axenstudioteam@gmail.com
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Hours */}

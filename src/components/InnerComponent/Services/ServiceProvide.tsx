@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { home_assets } from "@/assets/home_assets";
 import { services_assets } from "@/assets/Services/services_assets";
 import CountUp from "@/components/reactBits/CountUp/CountUp";
@@ -46,16 +47,16 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({
   const galleryItemBaseClass = "w-[calc(50%-0.5rem)] sm:w-[calc(33.33%-0.66rem)] h-28 md:h-32 rounded-lg";
 
   const viewMoreButton = (
-    <div className={`${galleryItemBaseClass} group bg-white flex flex-col items-center justify-center text-center p-2`}>
+    <Link to="/projects" className={`${galleryItemBaseClass} group bg-white flex flex-col items-center justify-center text-center p-2 no-underline`}>
       {viewMoreIconSvg && (
         <div className="bg-gradient-to-r transition-transform duration-300 rotate-[-30deg] group-hover:rotate-0 from-pink-500 to-orange-500 p-2 rounded-full mb-1">
           {viewMoreIconSvg}
         </div>
       )}
-      <button className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">
+      <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">
         View More
-      </button>
-    </div>
+      </span>
+    </Link>
   );
 
   const galleryImageElements = galleryImages.map((imgSrc, index) => (

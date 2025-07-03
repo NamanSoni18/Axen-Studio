@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const pricingItems = [
   { id: "01", name: "Video Shoot", price: "4,999/-" },
   { id: "02", name: "Pre Wedding Shoot", price: "14,999/-" },
@@ -44,11 +46,14 @@ const BookingSession = () => {
 
                   {/* Book Now Button - Right Side on Desktop, Last on Mobile */}
                   <div className="flex justify-center sm:justify-center lg:justify-end w-full order-3 sm:col-span-2 lg:col-span-1 lg:order-3">
-                    <button className="group relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-full border border-white bg-[#121212] hover:bg-white focus:outline-none transition-all duration-300 w-full sm:w-auto max-w-xs">
+                    <Link 
+                      to="/connect"
+                      className="group relative px-4 sm:px-6 py-2 sm:py-2.5 rounded-full border border-white bg-[#121212] hover:bg-white focus:outline-none transition-all duration-300 w-full sm:w-auto max-w-xs no-underline text-center"
+                    >
                       <span className="text-xs sm:text-sm font-bold bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 text-transparent bg-clip-text group-hover:font-bold">
                         Book Now
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               );

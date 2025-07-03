@@ -55,6 +55,26 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%
   }
+  .shimmer-text {
+    background: linear-gradient(
+      to right,
+      #ff8a00 20%,
+      #ff2e7a 40%,
+      #da4bdb 60%,
+      #ff8a00 80%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  @keyframes shimmer {
+    to {
+      background-position: -200% center;
+    }
+  }
 }
 @layer base {
   * {

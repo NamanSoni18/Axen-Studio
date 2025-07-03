@@ -35,7 +35,7 @@ export default function Hero({
           {/* Left Text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h1 
-              className="text-6xl sm:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text"
+              className="text-6xl sm:text-6xl lg:text-8xl font-bold text-transparent bg-clip-text"
               style={{
                 backgroundImage: `linear-gradient(to right, ${gradientColors.from}, ${gradientColors.via}, ${gradientColors.to})`
               }}
