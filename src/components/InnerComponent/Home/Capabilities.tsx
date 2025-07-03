@@ -25,12 +25,6 @@ const capabilities = [
     image: `${home_assets.section4_img3}`,
     gradient: "from-[#FF69B4] to-[#FF8C00]",
   },
-  // {
-  //   title: "Graphics Design",
-  //   description: "We deliver eye-catching visuals that enhance your brand",
-  //   image: `${home_assets.section4_img4}`,
-  //   gradient: "from-[#FF8C00] to-[#FFA500]",
-  // },
   {
     title: "Digital Marketing",
     description: "We deliver eye-catching visuals that enhance your brand",
@@ -49,11 +43,11 @@ export default function Capabilities() {
           </span>
         </h2>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {capabilities.map((capability) => (
             <div
               key={capability.title}
-              className="group relative overflow-hidden rounded-lg"
+              className="group relative w-full max-w-[300px] overflow-hidden rounded-lg sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]"
             >
               {/* Image */}
               <div className="aspect-square overflow-hidden">

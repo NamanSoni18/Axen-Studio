@@ -2,15 +2,15 @@ import { home_assets } from "@/assets/home_assets";
 import { Link } from "react-router-dom";
 
 const pricingItems = [
-  { id: "01", name: "Video Shoot", price: "4,999/-" },
-  { id: "02", name: "Pre Wedding Shoot", price: "14,999/-" },
-  { id: "03", name: "Audio Recording", price: "999/hr" },
-  { id: "04", name: "Video Edit", price: "4,999/-" },
-  { id: "05", name: "Reel Edit", price: "499/-" },
-  { id: "06", name: "Graphic Designing", price: "999/-" },
-  { id: "07", name: "Music Video Shoot", price: "19,999/-" },
-  { id: "08", name: "Music Production", price: "9,999/-" },
-  { id: "09", name: "Mixing & Mastering", price: "4,999/-" },
+  { id: "01", name: "Audio Recording", price: "999/hr" },
+  { id: "02", name: "Music Video Shoot", price: "19,999/-" },
+  { id: "03", name: "Music Production", price: "9,999/-" },
+  { id: "04", name: "Mixing & Mastering", price: "4,999/-" },
+  { id: "05", name: "Video Shoot", price: "4,999/-" },
+  { id: "06", name: "Pre Wedding Shoot", price: "14,999/-" },
+  { id: "07", name: "Video Edit", price: "4,999/-" },
+  { id: "08", name: "Reel Edit", price: "499/-" },
+  { id: "09", name: "Graphic Designing", price: "999/-" },
   { id: "10", name: "Advt. Shoot Package", price: "4,999/-" },
 ];
 
