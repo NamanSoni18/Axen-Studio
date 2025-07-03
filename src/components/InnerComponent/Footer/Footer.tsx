@@ -39,7 +39,7 @@ export default function Footer() {
             className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain animate-spin [animation-duration:10s]"
           /> */}
           <CircularText
-            text="Seven Year Experience"
+            text="Seven*Year*Experience*"
             onHover="speedUp"
             spinDuration={20}
             className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32"

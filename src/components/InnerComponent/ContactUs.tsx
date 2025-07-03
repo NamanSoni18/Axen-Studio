@@ -31,7 +31,7 @@ export default function ContactUs() {
               <img src={home_assets.section7_phone} alt="No Image" loading="lazy" className="h-14 w-14" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
-              Connect Us
+              Contact Us
             </h3>
             <p className="text-white">
               9818538442 / 9911910365
