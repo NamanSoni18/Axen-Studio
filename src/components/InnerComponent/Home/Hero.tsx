@@ -12,7 +12,7 @@ const Hero = () => {
           <div className="flex flex-1 flex-col items-center justify-center text-center lg:items-end lg:text-right">
             <h1 className="mb-6 flex flex-col text-5xl font-bold leading-tight sm:text-6xl lg:items-end lg:text-7xl">
               <span className="text-gradient">Axen</span>
-              <span className="text-gradient">Studios</span>
+              <span className="text-gradient">Studio</span>
             </h1>
             <p className="mb-8 max-w-md text-lg text-white/90">
               Welcome to Axen Studio, where creativity meets quality! From music
